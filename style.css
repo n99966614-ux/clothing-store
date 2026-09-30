@@ -1,0 +1,286 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f5f5;
+    color: #111;
+}
+
+
+.container {
+    width: min(1200px, 90%);
+    margin: 0 auto;
+}
+
+
+/* HEADER */
+
+.header {
+    background: #111;
+    color: white;
+    padding: 22px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.logo {
+    font-size: 24px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+
+.navigation {
+    display: flex;
+    gap: 30px;
+}
+
+
+.navigation a {
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+
+.navigation a:hover {
+    color: #aaa;
+}
+
+
+/* HERO */
+
+.hero {
+    min-height: 650px;
+    background:
+        linear-gradient(
+            rgba(0, 0, 0, 0.55),
+            rgba(0, 0, 0, 0.55)
+        ),
+        url("images/hero.jpg") center / cover;
+
+    display: flex;
+    align-items: center;
+}
+
+
+.hero-content {
+    color: white;
+}
+
+
+.subtitle {
+    font-size: 15px;
+    letter-spacing: 4px;
+    margin-bottom: 20px;
+}
+
+
+h1 {
+    font-size: clamp(45px, 7vw, 90px);
+    max-width: 800px;
+    line-height: 0.95;
+    margin-bottom: 30px;
+}
+
+
+.hero-text {
+    max-width: 550px;
+    font-size: 20px;
+    line-height: 1.6;
+    margin-bottom: 35px;
+}
+
+
+.button {
+    display: inline-block;
+    background: white;
+    color: black;
+    padding: 16px 30px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+
+.button:hover {
+    background: #ddd;
+}
+
+
+/* CATALOG */
+
+.catalog {
+    padding: 100px 0;
+}
+
+
+h2 {
+    font-size: 48px;
+    margin-bottom: 15px;
+}
+
+
+.section-text {
+    color: #666;
+    margin-bottom: 50px;
+}
+
+
+.products {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+
+.product {
+    background: white;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+
+.product:hover {
+    transform: translateY(-8px);
+}
+
+
+.product img {
+    width: 100%;
+    display: block;
+}
+
+
+.product-info {
+    padding: 25px;
+}
+
+
+.product-info h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+
+.product-info p {
+    color: #666;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+
+.product-info strong {
+    display: block;
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+
+.product-info button {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    background: #111;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+
+.product-info button:hover {
+    background: #333;
+}
+
+
+/* ABOUT */
+
+.about {
+    background: #111;
+    color: white;
+    padding: 100px 0;
+}
+
+
+.about p {
+    max-width: 700px;
+    font-size: 22px;
+    line-height: 1.7;
+    color: #ccc;
+}
+
+
+/* CONTACTS */
+
+.contacts {
+    padding: 100px 0;
+}
+
+
+.contacts p {
+    margin-top: 15px;
+    color: #555;
+}
+
+
+/* FOOTER */
+
+.footer {
+    background: #000;
+    color: #aaa;
+    text-align: center;
+    padding: 30px 0;
+}
+
+
+/* ADAPTIVE */
+
+@media (max-width: 800px) {
+
+    .header .container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+
+    .navigation {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+
+    .hero {
+        min-height: 550px;
+    }
+
+
+    .products {
+        grid-template-columns: 1fr;
+    }
+
+
+    h2 {
+        font-size: 36px;
+    }
+
+}
